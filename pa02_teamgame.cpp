@@ -4,65 +4,67 @@
 #include <algorithm>
 using namespace std;
 
-void selectsort(int list[], int n, int start) {
-    int least = start;
-    int i;
-    int min = list[start];
-    if (n > start) {
-        for (i = start; i < n; i++) {
-            if (min > list[i]) {
-                min = list[i];
-                least = i;
-            }
-        }
-        if (list[start] != min)
-            swap(list[start], list[least]);
+void quicksort(long long int quick[], long long int i, long long int j)
+{
+    if (i >= j) return;
+    long long int pivot = quick[(i + j) / 2];
+    long long int left = i;
+    long long int right = j;
 
-        selectsort(list, n, start + 1);
+    while (left <= right)
+    {
+        while (quick[left] < pivot) left++;
+        while (quick[right] > pivot) right--;
+        if (left <= right)
+        {
+            swap(quick[left], quick[right]);
+            left++; right--;
+        }
     }
+    quicksort(quick, i, right);
+    quicksort(quick, left, j);
 }
 
 int main(void) {
-    int pass;
-    int N = 0;
-    int* arr;
+    long long int pass;
+    long long int i = 0;
+    long long int N = 0;
+    long long int* arr;
     cin >> N >> pass;
-    arr = new int[N+1];
-    for (int i = 0; i < N; i++) {
+    arr = new long long int[N + 1];
+    for (i = 0; i < N; i++) {
         cin >> arr[i];
     }
     arr[N] == 0;
-    int k = arr[pass - 1];
-    selectsort(arr, N, 0);
-    int sum = 0;
+    long long int k = arr[pass - 1];
+    quicksort(arr, 0, N - 1);
+    long long int sum = 0;
 
     if (pass != 0) {
-        for (int i = 0; i < N; i++) {
+        for (i = 0; i < N; i++) {
             if (arr[i] == k) {
                 swap(arr[i], arr[N]);
                 k = i;
             }
-
         }
-        for (int i = 0; i <= N; i++) {
+        for (i = 0; i <= N; i++) {
             if (i != 0) {
                 arr[i] = arr[i - 1] + arr[i];
             }
         }
-
-        for (int i = 0; i <= N; i++) {
+        for (i = 0; i <= N; i++) {
             if (i != k) {
                 sum += arr[i];
             }
         }
     }
     else {
-        for (int i = 0; i < N; i++) {
+        for (i = 0; i < N; i++) {
             if (i != 0) {
                 arr[i] = arr[i - 1] + arr[i];
             }
         }
-        for (int i = 0; i < N; i++) {
+        for (i = 0; i < N; i++) {
             sum += arr[i];
         }
     }
