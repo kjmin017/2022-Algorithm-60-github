@@ -24,5 +24,8 @@
     <ClCompile Include="pa03_fish.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pa04_runcode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

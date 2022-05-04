@@ -1,2 +1,11 @@
 ﻿  pa01_sort.cpp
-  2022-Algorithm-60-github.vcxproj -> C:\Users\kjmin\Documents\컴퓨터알고리즘과제\2022-Algorithm-60-github\x64\Release\2022-Algorithm-60-github.exe
+  pa02_teamgame.cpp
+C:\Users\kjmin\Documents\컴퓨터알고리즘과제\2022-Algorithm-60-github\pa02_teamgame.cpp(38,12): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+  pa03_fish.cpp
+  pa04_runcode.cpp
+  코드를 생성하고 있습니다...
+C:\Users\kjmin\Documents\컴퓨터알고리즘과제\2022-Algorithm-60-github\pa01_sort.cpp(50): warning C4717: 'updateheap': 모든 제어 경로에서 재귀적입니다. 함수로 인해 런타임 스택 오버플로가 발생합니다.
+pa02_teamgame.obj : error LNK2005: main이(가) pa01_sort.obj에 이미 정의되어 있습니다.
+pa03_fish.obj : error LNK2005: main이(가) pa01_sort.obj에 이미 정의되어 있습니다.
+pa04_runcode.obj : error LNK2005: main이(가) pa01_sort.obj에 이미 정의되어 있습니다.
+C:\Users\kjmin\Documents\컴퓨터알고리즘과제\2022-Algorithm-60-github\x64\Release\2022-Algorithm-60-github.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
