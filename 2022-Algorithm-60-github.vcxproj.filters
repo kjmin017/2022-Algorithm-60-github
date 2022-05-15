@@ -27,5 +27,8 @@
     <ClCompile Include="pa04_runcode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pa05_navi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
