@@ -30,5 +30,11 @@
     <ClCompile Include="pa05_navi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pa07_palin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pa06_matching.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
